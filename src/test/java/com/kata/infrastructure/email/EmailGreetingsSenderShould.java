@@ -30,13 +30,14 @@ public class EmailGreetingsSenderShould {
         // Given
         String email = "john.doe@foobar.com";
         String firstName = "John";
-        Employee employee = new Employee(firstName, "Doe", LocalDate.now(), email);
+        String lastName ="Doe";
+        Employee employee = new Employee(firstName, lastName, LocalDate.now(), email);
 
         // When
         emailGreetingsSender.sendGreetingsTo(employee);
 
         // Then
-        verify(emailSender).send(new Email(email, "Happy birthday!", "Happy birthday, dear " + firstName + "!"));
+        verify(emailSender).send(new Email(email, "Happy birthday!", "Happy birthday, dear " + firstName + " " + lastName + "!"));
     }
 
 }

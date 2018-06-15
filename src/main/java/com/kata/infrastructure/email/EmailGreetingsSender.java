@@ -16,7 +16,7 @@ public class EmailGreetingsSender implements GreetingsSender {
         emailSender.send(new Email(
                         employee.getEmail(),
                         "Happy birthday!",
-                        String.format("Happy birthday, dear %s!", employee.getFirstName())
+                        String.format("Happy birthday, dear %s %s!", employee.getFirstName(), employee.getLastName())
                 )
         );
     }
