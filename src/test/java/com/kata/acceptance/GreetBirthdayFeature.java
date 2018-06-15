@@ -42,7 +42,7 @@ public class GreetBirthdayFeature {
         greetBirthday.greet();
 
         // Then
-        verify(emailSender).send(new Email("john.doe@foobar.com", "Happy birthday!", "Happy birthday, dear John!"));
+        verify(emailSender).send(new Email("john.doe@foobar.com", "Happy birthday!", "Happy birthday, dear John Doe!"));
         Mockito.verifyNoMoreInteractions(emailSender);
     }
 

@@ -28,4 +28,8 @@ public class Employee {
     public String getEmail() {
         return email;
     }
+
+    public String getLastName() {
+        return lastName;
+    }
 }
