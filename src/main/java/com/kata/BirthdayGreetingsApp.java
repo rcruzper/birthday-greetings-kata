@@ -15,6 +15,7 @@ public class BirthdayGreetingsApp {
                 new EmailGreetingsSender(new EmailSender()),
                 new FileEmployeeRepository(),
                 Clock.systemUTC());
+        
         greetBirthday.greet();
     }
 
